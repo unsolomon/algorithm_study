@@ -1,6 +1,7 @@
 def solution(num_list, n):
     answer = []
     
-    return num_list[n-1:]
+    num_list = map(int,input().split())
     
-   
+    for i in range(n):
+         print(num_list[n])
