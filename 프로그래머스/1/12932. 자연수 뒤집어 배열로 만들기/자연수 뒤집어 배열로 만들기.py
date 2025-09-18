@@ -1,3 +1,7 @@
 def solution(n):
     answer = []
-    return list(map(int,str(n)))[::-1]
+    
+    for i in str(n):
+        answer.append(int(i))
+
+    return answer[::-1]
