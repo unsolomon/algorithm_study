@@ -1,9 +1,8 @@
 def solution(x):
-    answer = 0
-    for i in str(x):
-        answer += int(i)
     
+    a = sum(int(i) for i in str(x))
     
-    
-    
-    return x % answer == 0
+    if x % a == 0:
+        return True
+    else:
+        return False
