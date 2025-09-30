@@ -1,13 +1,11 @@
 def solution(absolutes, signs):
-    answer = 0
+    answer  = 0
     
-    
-    for i,x in zip(absolutes,signs):
-        if x:
-            answer += i
+    for i in range(len(signs)):
+        if signs[i]:
+            answer += absolutes[i]
         else:
-            answer -= i
-            
+            answer -= absolutes[i]
     
     
     return answer
