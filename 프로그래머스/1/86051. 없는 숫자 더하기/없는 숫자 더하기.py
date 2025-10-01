@@ -1,9 +1,10 @@
 def solution(numbers):
-    # 0~9 전체 집합
-    all_numbers = set(range(10))
-
-    given_numbers = set(numbers)
-
-    missing_numbers = all_numbers - given_numbers
-
-    return sum(missing_numbers)
+    answer = [0,1,2,3,4,5,6,7,8,9]
+    numbers.sort()
+    
+    for i in numbers:
+        answer.remove(i)
+        
+    
+    
+    return sum(answer)
