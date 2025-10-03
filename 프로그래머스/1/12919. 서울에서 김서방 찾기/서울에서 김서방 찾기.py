@@ -1,3 +1,7 @@
 def solution(seoul):
-    answer = seoul.index("Kim")
-    return f"김서방은 {answer}에 있다"
+    answer = ''
+    
+        
+    for idx,name in enumerate(seoul):
+        if name == 'Kim':
+            return f"김서방은 {idx}에 있다"
