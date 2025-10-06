@@ -1,9 +1,8 @@
 def solution(s):
     answer = len(s)
-    
-    if answer%2 == 0:
-        return s[answer//2-1:answer//2+1]
+    mid = answer //2
+
+    if answer %2 == 0:
+        return s[mid-1:mid+1]
     else:
-        return s[answer//2]
-    
-    
+        return s[mid]
