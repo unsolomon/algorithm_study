@@ -1,10 +1,9 @@
 def solution(a, b):
-    c = 0
-    for i in range(len(a)):
-        
-        c += a[i]*b[i]
-        
-        
+    answer = 0
+
+    for i in range(0,len(a)):
+        answer += a[i] * b[i]
     
+
     
-    return c
+    return answer
