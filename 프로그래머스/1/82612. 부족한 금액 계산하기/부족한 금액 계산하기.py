@@ -1,9 +1,11 @@
 def solution(price, money, count):
     answer = 0
+    
+    total = price*count * (count+1) //2
+    
+    
 
     
-    for i in range(1,count+1):
-        answer  += price * i
-         
+    return max((total-money),0)
 
-    return max(answer - money, 0)
+
