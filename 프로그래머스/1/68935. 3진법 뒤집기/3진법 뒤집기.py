@@ -1,9 +1,14 @@
 def solution(n):
-
-    ternary = ''
+    answer = []
     while n > 0:
-        ternary += str(n % 3)
+        answer.append(str(n%3))
         n //= 3
-
-
-    return int(ternary, 3)
+        
+    re_st = "".join(answer)
+    
+    
+    answer = int(re_st,3)
+    
+    
+    
+    return answer
