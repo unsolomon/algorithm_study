@@ -1,14 +1,21 @@
 def solution(s):
-    result = []
-    idx = 0  # 단어 내 인덱스
-    for ch in s:
-        if ch == ' ':
-            result.append(' ')
-            idx = 0  # 단어 시작
+    answer = ''
+    index = 0
+    
+    for char in s:
+        if char == ' ':
+            index = 0
+            answer += ' '
+            
         else:
-            if idx % 2 == 0:
-                result.append(ch.upper())
+            if index % 2 == 0:
+                answer += char.upper()
+                
             else:
-                result.append(ch.lower())
-            idx += 1
-    return ''.join(result)
+                answer += char.lower()
+                
+            index += 1
+            
+    return answer
+    
+    
