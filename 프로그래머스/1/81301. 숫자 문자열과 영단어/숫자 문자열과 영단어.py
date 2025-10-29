@@ -1,11 +1,7 @@
 def solution(s):
-    words = ['zero','one','two','three','four','five','six','seven','eight','nine']
-    answer = s
-    for i,word in enumerate(words):
-        
-        answer = answer.replace(word,str(i))
-    
-    
-    
-    
-    return int(answer)
+    answer = ['zero','one','two','three','four','five','six','seven','eight','nine']
+    result = ''
+    for i,z in enumerate(answer):
+        s = s.replace(z,str(i))
+    return int(s)
+
