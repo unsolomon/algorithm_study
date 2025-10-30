@@ -1,10 +1,12 @@
 def solution(array, commands):
     answer = []
-    for i,k,j in commands:
-        sliced   = array[i-1:k]
-        sliced.sort()
-        answer.append(sliced[j-1])
-    
+    a= 0
+    for i,j,k in commands:
+        q = sorted(array[i-1:j])
+        answer.append(q[k-1])
+        
     
     
     return answer
+
+
