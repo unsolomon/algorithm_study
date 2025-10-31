@@ -1,10 +1,17 @@
 def solution(a, b, n):
     answer = 0
+    remain = 0
+    
     while n >= a:
+        new = (n//a) * b
+        answer += new
+        n = (n%a)+new
         
-
-        new_cola = (n // a) * b   
-        answer += new_cola      
-        n = (n % a) + new_cola  
-
+        
+        
     return answer
+        
+        
+        
+    
+    
