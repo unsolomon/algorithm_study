@@ -1,17 +1,17 @@
+import heapq
 def solution(k, score):
     answer = []
-    fame = []
+    ha = []
     
     for i in score:
-        fame.append(i)
+        heapq.heappush(ha,i)
+        if len(ha) > k :
+            heapq.heappop(ha)
+            
+        answer.append(ha[0])
         
-        if len(fame) > k:
-            fame.remove(min(fame))
-        
-        answer.append(min(fame))
+    
+    
+    
     return answer
-
-
-
-
 
