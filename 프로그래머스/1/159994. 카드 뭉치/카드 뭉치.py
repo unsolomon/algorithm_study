@@ -1,14 +1,20 @@
 def solution(cards1, cards2, goal):
-    i, j = 0, 0  # 각 카드 뭉치의 인덱스
+    answer = ''
+    idx , idx2 = 0,0
+    n,n2 = len(cards1),len(cards2)
+    
+    for word in goal:
+        if idx < n and cards1[idx] == word:
+            idx += 1
+        elif idx2 < n2 and cards2[idx2] == word:
+            idx2 += 1
+            
+        else : 
+            return "No"
     
     
-    for k in goal:
-        
-        if  i < len(cards1) and k == cards1[i]:
-            i += 1
-        elif j < len(cards2) and k == cards2[j]:
-            j += 1
-        else:
-            return 'No'
+    
     
     return "Yes"
+
+
