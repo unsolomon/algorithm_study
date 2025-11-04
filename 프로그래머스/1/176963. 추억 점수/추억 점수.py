@@ -1,14 +1,10 @@
 def solution(name, yearning, photo):
     answer = []
-    score = dict(zip(name,yearning))
+    score_map = dict(zip(name,yearning))
     
-    for p in photo:
-        total = 0
-        
-        for person in p:
-            total += score.get(person,0)
-        answer.append(total)
-        
+    for g in photo:
+        score = sum(score_map.get(person,0)for person in g)
+        answer.append(score)
+    
     return answer
-        
-        
+
