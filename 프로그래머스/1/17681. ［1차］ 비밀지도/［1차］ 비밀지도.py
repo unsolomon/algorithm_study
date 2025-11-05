@@ -3,9 +3,15 @@ def solution(n, arr1, arr2):
     
     for i in range(n):
         
-        a = bin(arr1[i] | arr2[i])[2:].zfill(n)
-        line = a.replace('1','#').replace('0',' ')
-    
+        b_s = bin(arr1[i] | arr2[i])[2:].zfill(n)
+        line = ''
+        for c in b_s:
+            if c == '1':
+                line += '#'
+            else:
+                line += ' '
         answer.append(line)
+    
+    
     
     return answer
