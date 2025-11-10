@@ -1,9 +1,16 @@
 def solution(n, m, section):
     answer = 0
-    last_painted = 0
     
-    for s in section:
-        if s > last_painted:
-            answer += 1
-            last_painted = s + m - 1
+    i = 0
+    length = len(section)
+    
+    while i < length:
+        roll_end = section[i] + m -1
+        answer += 1
+        
+        
+        while i < length and section[i] <= roll_end:
+            i += 1
+    
+    
     return answer
